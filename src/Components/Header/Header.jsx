@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -11,7 +10,7 @@ const Header = () => {
         <NavLink to="/jobs">Jobs</NavLink>
       </li>
       <li>
-        <NavLink to="/Statistics">Statistics</NavLink>
+        <NavLink to="/statistics">Statistics</NavLink>
       </li>
       <li>
         <NavLink to="/applied">Applied Jobs</NavLink>
@@ -23,7 +22,7 @@ const Header = () => {
   );
 
   return (
-    <div>
+    <div className="my-5">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -56,7 +55,9 @@ const Header = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="px-7 py-5 bg-violet-600 rounded-2xl text-xl font-extrabold">
+            Star Applying
+          </a>
         </div>
       </div>
     </div>

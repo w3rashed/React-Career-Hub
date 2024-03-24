@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppliedJobs from "./Components/AppliedJobs/AppliedJobs";
-import Jobs from "./Components/AppliedJobs/Joobs/Jobs";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Home from "./Components/Home/Home";
 import JobDetails from "./Components/JobDetails/JobDetails";
+import Jobs from "./Components/Joobs/Jobs";
 import Root from "./Components/Root/Root";
 import Statistics from "./Components/Statistics/Statistics";
 import "./index.css";
@@ -31,6 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/applied",
         element: <AppliedJobs></AppliedJobs>,
+        loader: () => fetch("jobs.json"),
       },
       // {
       //   path: "/blogs",
